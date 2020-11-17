@@ -1,3 +1,5 @@
+
+
 local UnPacked = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local NotDone = Instance.new("ImageLabel")
@@ -5,8 +7,11 @@ local TextLabel = Instance.new("TextLabel")
 local UnPackedHeader = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 
+--Properties:
+
 UnPacked.Name = "UnPacked"
 UnPacked.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UnPacked.ResetOnSpawn = false
 
 Frame.Parent = UnPacked
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -56,13 +61,13 @@ TextLabel_2.Text = "Made By: Loween#6857"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 24.000
 
+-- Scripts:
 
-
-local function QMUD_fake_script() 
+local function MXGDCP_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
-	local frame = script.Parent.Parent.Frame 
-	local hotkey = Enum.KeyCode.RightShift 
+	local frame = script.Parent.Parent.Frame --Change Frame to your Frame name!
+	local hotkey = Enum.KeyCode.RightShift -- Change Q to your own hotkey!
 	
 	local UIS = game:GetService("UserInputService")
 	local open = true
@@ -84,8 +89,8 @@ local function QMUD_fake_script()
 	end)
 	
 end
-coroutine.wrap(QMUD_fake_script)()
-local function HPST_fake_script() 
+coroutine.wrap(MXGDCP_fake_script)()
+local function ZBSPGTX_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -128,12 +133,12 @@ local function HPST_fake_script()
 	
 	
 end
-coroutine.wrap(HPST_fake_script)()
-local function VDUHAZF_fake_script()
+coroutine.wrap(ZBSPGTX_fake_script)()
+local function KUPWPK_fake_script() -- Frame.PositioningScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	
 	script.Parent:TweenPosition(UDim2.new(0.1, 0, 0.1, 0), "Out", "Quad", 1)
 	script.Parent.Draggable = true
 end
-coroutine.wrap(VDUHAZF_fake_script)()
+coroutine.wrap(KUPWPK_fake_script)()
