@@ -1,53 +1,272 @@
-local mouse = game:GetService('Players').LocalPlayer:GetMouse()
+-- Gui to Lua
+-- Version: 3.2
 
-local function hotkeyHandler(key)
-  if (key == 'q') then
-    for _, v in next, getgc(true) do
-      if (type(v) == 'table' and rawget(v, 'Nitro')) then
-        v.Nitro = 250
-      end
-    end
-  end
-end
+-- Instances:
 
-mouse.KeyDown:connect(hotkeyHandler)
+local UnPacked = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local UIGradient_2 = Instance.new("UIGradient")
+local UnPackedHeader = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Line = Instance.new("Frame")
+local UIGradient_3 = Instance.new("UIGradient")
+local UIGradient_4 = Instance.new("UIGradient")
+local UserIco2 = Instance.new("ImageLabel")
+local Local = Instance.new("TextButton")
+local UIGradient_5 = Instance.new("UIGradient")
 
-for i=1,7 do
-wait(.02)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11.8937483, 19.668396, -1723.76379) + Vector3.new(1,0,0)
-end
-wait(0.05)
-local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-for i,v in pairs (UI.CircleAction.Specs) do
-if v.Name == "Grab" then
-v:Callback(v, true)
-end
-end
-wait(0.1)
-for i=1,7 do
-wait(.02)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(788.144226, 20.6668549, -148.559204) + Vector3.new(1,0,0)
-end
-wait(0.05)
-local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-for i,v in pairs (UI.CircleAction.Specs) do
-if v.Name == "Grab" then
-v:Callback(v, true)
-end
-end
-wait(0.1)
-for i=1,7 do
-wait(.02)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-309.690399, 19.3684883, 288.376099) + Vector3.new(1,0,0)
-end
-wait(0.05)
-local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-for i,v in pairs (UI.CircleAction.Specs) do
-if v.Name == "Grab" then
-v:Callback(v, true)
-end
-end
+--Properties:
 
-workspace.TouchTrigger.JetPackGiver.Position = game:GetService('Players').LocalPlayer.Character.Head.Position
+UnPacked.Name = "UnPacked"
+UnPacked.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UnPacked.ResetOnSpawn = false
 
-workspace.TouchTrigger.JetPackGiver.Position = game:GetService('Players').LocalPlayer.Character.Head.Position
+Frame.Parent = UnPacked
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.25505051, 0, 0.0853391662, 0)
+Frame.Size = UDim2.new(0, 356, 0, 335)
+
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 2)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Parent = Frame
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(9, 9, 9)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(13, 13, 13)), ColorSequenceKeypoint.new(0.83, Color3.fromRGB(107, 107, 107)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = game.StarterGui.UnPacked.Frame.UnPacked Loading Script
+
+UnPackedHeader.Name = "UnPacked Header"
+UnPackedHeader.Parent = Frame
+UnPackedHeader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UnPackedHeader.BackgroundTransparency = 1.000
+UnPackedHeader.Size = UDim2.new(0, 356, 0, 38)
+UnPackedHeader.Font = Enum.Font.GothamBlack
+UnPackedHeader.Text = "UnPacked"
+UnPackedHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
+UnPackedHeader.TextSize = 14.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0, 0, 0.11343284, 0)
+Frame_2.Size = UDim2.new(0, 356, 0, 297)
+
+UICorner_2.Parent = Frame_2
+
+Line.Name = "Line"
+Line.Parent = Frame_2
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderSizePixel = 0
+Line.Size = UDim2.new(0, 356, 0, 9)
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(234, 234, 234)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_3.Parent = Line
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 2)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_4.Parent = Frame_2
+
+UserIco2.Name = "User Ico2"
+UserIco2.Parent = Frame
+UserIco2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UserIco2.BackgroundTransparency = 1.000
+UserIco2.Position = UDim2.new(0.0196629222, 0, 0.197014928, 0)
+UserIco2.Size = UDim2.new(0, 31, 0, 28)
+UserIco2.Image = "rbxassetid://6003637423"
+
+Local.Name = "Local"
+Local.Parent = UserIco2
+Local.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Local.BackgroundTransparency = 1.000
+Local.BorderSizePixel = 0
+Local.Position = UDim2.new(1, 0, 0, 0)
+Local.Size = UDim2.new(0, 50, 0, 28)
+Local.Font = Enum.Font.GothamBold
+Local.Text = "Local"
+Local.TextColor3 = Color3.fromRGB(255, 255, 255)
+Local.TextSize = 14.000
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.22, Color3.fromRGB(3, 3, 3)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(86, 86, 86)), ColorSequenceKeypoint.new(0.67, Color3.fromRGB(116, 116, 116)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_5.Parent = Local
+
+-- Scripts:
+
+local function LGQV_fake_script() -- Frame.Hotkey Opener 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent.Parent.Frame --Change Frame to your Frame name!
+	local hotkey = Enum.KeyCode.RightShift -- Change Q to your own hotkey!
+	
+	local UIS = game:GetService("UserInputService")
+	local open = true
+	
+	
+	
+	UIS.InputBegan:Connect(function(key, gp)
+		if key.KeyCode == hotkey then
+			if UIS:GetFocusedTextBox() == nil then
+				if open == false then
+					open = true 
+					frame.Visible = open
+				elseif open == true then
+					open = false
+					frame.Visible = open
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(LGQV_fake_script)()
+local function IZLC_fake_script() -- Frame.Drag Script 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 1.0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+	
+	
+end
+coroutine.wrap(IZLC_fake_script)()
+local function DJMNLAI_fake_script() -- Frame.UnPacked Loading Script 
+	local script = Instance.new('LocalScript', Frame)
+
+	pcall(
+		function()
+			game.StarterGui:SetCore(
+				"ChatMakeSystemMessage",
+				{
+					Text = "{Oxipine#6857} UnPacked is loading.. Not Done BTW",
+					Color = Color3.new(0, 0, 0)
+				}
+			)
+		end
+	)
+	
+	wait (5)
+	
+	pcall(
+		function()
+			game.StarterGui:SetCore(
+				"ChatMakeSystemMessage",
+				{
+					Text = "{Oxipine#6857} Unpacked loaded succesfully, join our discord for some thing bout the script",
+					Color = Color3.new(0, 0, 0)
+				}
+			)
+		end
+	)
+	
+	wait (3)
+	
+	pcall(
+		function()
+			game.StarterGui:SetCore(
+				"ChatMakeSystemMessage",
+				{
+					Text = "{Unpacked} Press 'Rshift' to open and close the gui :D",
+					Color = Color3.new(0, 0, 0)
+				}
+			)
+		end
+	)
+	
+	wait (120)
+	
+	pcall(
+		function()
+			game.StarterGui:SetCore(
+				"ChatMakeSystemMessage",
+				{
+					Text = "Soup How Ya Doing?",
+					Color = Color3.new(0, 1, 0)
+				}
+			)
+		end
+	)
+end
+coroutine.wrap(DJMNLAI_fake_script)()
+local function ZTHNNNE_fake_script() -- Frame.Pos Script 
+	local script = Instance.new('LocalScript', Frame)
+
+	
+	script.Parent:TweenPosition(UDim2.new(0.1, 0, 0.1, 0), "Out", "Quad", 1)
+	script.Parent.Draggable = true
+end
+coroutine.wrap(ZTHNNNE_fake_script)()
+local function OYVTNW_fake_script() -- Frame.Auto Ex Script 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(OYVTNW_fake_script)()
+local function FORMV_fake_script() -- nil.Inf Jetpack Fuel 
+	local script = Instance.new('LocalScript', nil)
+
+	for _, v in next, getgc(true) do
+		if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
+			v.LocalMaxFuel = math.huge
+			v.LocalFuel = math.huge
+			v.LocalFuelType = 'Rocket'
+		end
+	end
+end
+coroutine.wrap(FORMV_fake_script)()
+local function AUPZOGX_fake_script() -- nil.inf nitro 
+	local script = Instance.new('LocalScript', nil)
+
+	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
+	
+	local function hotkeyHandler(key)
+		if (key == 'q') then
+			for _, v in next, getgc(true) do
+				if (type(v) == 'table' and rawget(v, 'Nitro')) then
+					v.Nitro = 250
+				end
+			end
+		end
+	end
+	
+	mouse.KeyDown:connect(hotkeyHandler)
+end
+coroutine.wrap(AUPZOGX_fake_script)()
