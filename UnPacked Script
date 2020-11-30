@@ -3,128 +3,124 @@
 
 -- Instances:
 
-local UnPacked = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
-local UIGradient_2 = Instance.new("UIGradient")
-local UnPackedHeader = Instance.new("TextLabel")
-local Frame_2 = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local Line = Instance.new("Frame")
-local UIGradient_3 = Instance.new("UIGradient")
-local UIGradient_4 = Instance.new("UIGradient")
-local UserIco2 = Instance.new("ImageLabel")
-local Local = Instance.new("TextButton")
-local UIGradient_5 = Instance.new("UIGradient")
+local Text = Instance.new("Folder")
+local Text_2 = Instance.new("TextLabel")
+local Text_3 = Instance.new("TextLabel")
+local Header = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
 
 --Properties:
 
-UnPacked.Name = "UnPacked"
-UnPacked.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-UnPacked.ResetOnSpawn = false
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
-Frame.Parent = UnPacked
+Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.25505051, 0, 0.0853391662, 0)
-Frame.Size = UDim2.new(0, 356, 0, 335)
+Frame.Position = UDim2.new(0, -50, 0.5, -50)
+Frame.Size = UDim2.new(0, 334, 0, 342)
+Frame.Visible = false
 
 UICorner.Parent = Frame
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 2)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.18, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.42, Color3.fromRGB(170, 0, 0)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
 UIGradient.Parent = Frame
 
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(9, 9, 9)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(13, 13, 13)), ColorSequenceKeypoint.new(0.83, Color3.fromRGB(107, 107, 107)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_2.Parent = game.StarterGui.UnPacked.Frame.UnPacked Loading Script
+Text.Name = "Text"
+Text.Parent = Frame
 
-UnPackedHeader.Name = "UnPacked Header"
-UnPackedHeader.Parent = Frame
-UnPackedHeader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UnPackedHeader.BackgroundTransparency = 1.000
-UnPackedHeader.Size = UDim2.new(0, 356, 0, 38)
-UnPackedHeader.Font = Enum.Font.GothamBlack
-UnPackedHeader.Text = "UnPacked"
-UnPackedHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
-UnPackedHeader.TextSize = 14.000
+Text_2.Name = "Text"
+Text_2.Parent = Text
+Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.BackgroundTransparency = 1.000
+Text_2.Position = UDim2.new(0, 0, 0.146198824, 0)
+Text_2.Size = UDim2.new(0, 334, 0, 128)
+Text_2.Font = Enum.Font.DenkOne
+Text_2.Text = "No Wait Inf Nitro And Inf JetPack Fuel Are On"
+Text_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Text_2.TextSize = 17.000
+Text_2.TextWrapped = true
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.Position = UDim2.new(0, 0, 0.11343284, 0)
-Frame_2.Size = UDim2.new(0, 356, 0, 297)
+Text_3.Name = "Text"
+Text_3.Parent = Text
+Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.BackgroundTransparency = 1.000
+Text_3.Position = UDim2.new(0, 0, 0.242690101, 0)
+Text_3.Size = UDim2.new(0, 334, 0, 128)
+Text_3.Font = Enum.Font.DenkOne
+Text_3.Text = "By Default"
+Text_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Text_3.TextSize = 17.000
+Text_3.TextWrapped = true
 
-UICorner_2.Parent = Frame_2
+Header.Name = "Header"
+Header.Parent = Text
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.Size = UDim2.new(0, 334, 0, 50)
+Header.Font = Enum.Font.DenkOne
+Header.Text = "UnPacked"
+Header.TextColor3 = Color3.fromRGB(0, 0, 0)
+Header.TextScaled = true
+Header.TextSize = 14.000
+Header.TextWrapped = true
 
-Line.Name = "Line"
-Line.Parent = Frame_2
-Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line.BorderSizePixel = 0
-Line.Size = UDim2.new(0, 356, 0, 9)
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(234, 234, 234)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
-UIGradient_3.Parent = Line
-
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 2)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
-UIGradient_4.Parent = Frame_2
-
-UserIco2.Name = "User Ico2"
-UserIco2.Parent = Frame
-UserIco2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UserIco2.BackgroundTransparency = 1.000
-UserIco2.Position = UDim2.new(0.0196629222, 0, 0.197014928, 0)
-UserIco2.Size = UDim2.new(0, 31, 0, 28)
-UserIco2.Image = "rbxassetid://6003637423"
-
-Local.Name = "Local"
-Local.Parent = UserIco2
-Local.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Local.BackgroundTransparency = 1.000
-Local.BorderSizePixel = 0
-Local.Position = UDim2.new(1, 0, 0, 0)
-Local.Size = UDim2.new(0, 50, 0, 28)
-Local.Font = Enum.Font.GothamBold
-Local.Text = "Local"
-Local.TextColor3 = Color3.fromRGB(255, 255, 255)
-Local.TextSize = 14.000
-
-UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.22, Color3.fromRGB(3, 3, 3)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(86, 86, 86)), ColorSequenceKeypoint.new(0.67, Color3.fromRGB(116, 116, 116)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_5.Parent = Local
+Credits.Name = "Credits"
+Credits.Parent = Text
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, 0.853801191, 0)
+Credits.Size = UDim2.new(0, 334, 0, 50)
+Credits.Font = Enum.Font.LuckiestGuy
+Credits.Text = "Made By Oxipine#6857"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextSize = 14.000
 
 -- Scripts:
 
-local function LGQV_fake_script() -- Frame.Hotkey Opener 
-	local script = Instance.new('LocalScript', Frame)
+local function MIPEQLE_fake_script() -- Text.Inf JetPack Fuel 
+	local script = Instance.new('LocalScript', Text)
 
-	local frame = script.Parent.Parent.Frame --Change Frame to your Frame name!
-	local hotkey = Enum.KeyCode.RightShift -- Change Q to your own hotkey!
-	
-	local UIS = game:GetService("UserInputService")
-	local open = true
-	
-	
-	
-	UIS.InputBegan:Connect(function(key, gp)
-		if key.KeyCode == hotkey then
-			if UIS:GetFocusedTextBox() == nil then
-				if open == false then
-					open = true 
-					frame.Visible = open
-				elseif open == true then
-					open = false
-					frame.Visible = open
-				end
+	repeat 
+		for _, v in next, getgc(true) do
+			if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
+				v.LocalMaxFuel = math.huge
+				v.LocalFuel = math.huge
+				v.LocalFuelType = 'Rocket'
 			end
 		end
-	end)
-	
+		
+		print "Hdws"
+	until 10000000000000000000000000000000000000000000000000
 end
-coroutine.wrap(LGQV_fake_script)()
-local function IZLC_fake_script() -- Frame.Drag Script 
+coroutine.wrap(MIPEQLE_fake_script)()
+local function OARPW_fake_script() -- Frame.Rshit 
+	local script = Instance.new('LocalScript', Frame)
+
+	function PopupGui()
+		if script.Parent.Visible == true then script.Parent.Visible = false
+		else script.Parent.Visible = true
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(key)
+		if key.KeyCode == Enum.KeyCode.RightShift then
+			PopupGui()
+		end
+	end)
+end
+coroutine.wrap(OARPW_fake_script)()
+local function TVDJEHT_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
 	    dragToggle = nil
-	    local dragSpeed = 1.0
+	    local dragSpeed = 0.25
 	    dragInput = nil
 	    dragStart = nil
 	    local dragPos = nil
@@ -159,101 +155,20 @@ local function IZLC_fake_script() -- Frame.Drag Script
 	
 	dragify(script.Parent)
 	
-	
+	--Dont use with other GUIs etc without my P3rm1ss10N! -W0lfy
 end
-coroutine.wrap(IZLC_fake_script)()
-local function DJMNLAI_fake_script() -- Frame.UnPacked Loading Script 
+coroutine.wrap(TVDJEHT_fake_script)()
+local function TZBPPME_fake_script() -- Frame.PositioningScript 
 	local script = Instance.new('LocalScript', Frame)
 
-	pcall(
-		function()
-			game.StarterGui:SetCore(
-				"ChatMakeSystemMessage",
-				{
-					Text = "{Oxipine#6857} UnPacked is loading.. Not Done BTW",
-					Color = Color3.new(0, 0, 0)
-				}
-			)
-		end
-	)
-	
-	wait (5)
-	
-	pcall(
-		function()
-			game.StarterGui:SetCore(
-				"ChatMakeSystemMessage",
-				{
-					Text = "{Oxipine#6857} Unpacked loaded succesfully, join our discord for some thing bout the script",
-					Color = Color3.new(0, 0, 0)
-				}
-			)
-		end
-	)
-	
-	wait (3)
-	
-	pcall(
-		function()
-			game.StarterGui:SetCore(
-				"ChatMakeSystemMessage",
-				{
-					Text = "{Unpacked} Press 'Rshift' to open and close the gui :D",
-					Color = Color3.new(0, 0, 0)
-				}
-			)
-		end
-	)
-	
-	wait (120)
-	
-	pcall(
-		function()
-			game.StarterGui:SetCore(
-				"ChatMakeSystemMessage",
-				{
-					Text = "Soup How Ya Doing?",
-					Color = Color3.new(0, 1, 0)
-				}
-			)
-		end
-	)
-end
-coroutine.wrap(DJMNLAI_fake_script)()
-local function ZTHNNNE_fake_script() -- Frame.Pos Script 
-	local script = Instance.new('LocalScript', Frame)
-
-	
+	--//Scripted by Sochi\\
+	-- script.Parent.Position = UDim2.new(0, 100, 0, -1000)
 	script.Parent:TweenPosition(UDim2.new(0.1, 0, 0.1, 0), "Out", "Quad", 1)
 	script.Parent.Draggable = true
 end
-coroutine.wrap(ZTHNNNE_fake_script)()
-local function OYVTNW_fake_script() -- Frame.Auto Ex Script 
+coroutine.wrap(TZBPPME_fake_script)()
+local function TTTQX_fake_script() -- Frame.Inf Nitro 
 	local script = Instance.new('LocalScript', Frame)
-
-	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-	while wait() do
-		for i,v in pairs (UI.CircleAction.Specs) do
-			v.Duration = 0;
-			v.Timed = true;
-		end
-	end
-end
-coroutine.wrap(OYVTNW_fake_script)()
-local function FORMV_fake_script() -- nil.Inf Jetpack Fuel 
-	local script = Instance.new('LocalScript', nil)
-
-	for _, v in next, getgc(true) do
-		if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
-			v.LocalMaxFuel = math.huge
-			v.LocalFuel = math.huge
-			v.LocalFuelType = 'Rocket'
-		end
-	end
-end
-coroutine.wrap(FORMV_fake_script)()
-local function AUPZOGX_fake_script() -- nil.inf nitro 
-	local script = Instance.new('LocalScript', nil)
 
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
 	
@@ -269,4 +184,16 @@ local function AUPZOGX_fake_script() -- nil.inf nitro
 	
 	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(AUPZOGX_fake_script)()
+coroutine.wrap(TTTQX_fake_script)()
+local function YBLFI_fake_script() -- Frame.No Wait 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(YBLFI_fake_script)()
