@@ -87,7 +87,7 @@ TextLabel_3.TextSize = 14.000
 
 -- Scripts:
 
-local function ZUPRN_fake_script() -- Frame.Rshit 
+local function USYRKLY_fake_script() -- Frame.Rshit 
 	local script = Instance.new('LocalScript', Frame)
 
 	function PopupGui()
@@ -102,24 +102,24 @@ local function ZUPRN_fake_script() -- Frame.Rshit
 		end
 	end)
 end
-coroutine.wrap(ZUPRN_fake_script)()
-local function MMAFC_fake_script() -- Script.Sayer 
+coroutine.wrap(USYRKLY_fake_script)()
+local function LYZJ_fake_script() -- Script.Sayer 
 	local script = Instance.new('LocalScript', Script)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Thank you for using unpacked!", Duration = 5
 	})
 end
-coroutine.wrap(MMAFC_fake_script)()
-local function NPQLY_fake_script() -- nil.Sayer 2 
+coroutine.wrap(LYZJ_fake_script)()
+local function TGQN_fake_script() -- nil.Sayer 2 
 	local script = Instance.new('LocalScript', nil)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Press R Shift For More Details", Duration = 5
 	})
 end
-coroutine.wrap(NPQLY_fake_script)()
-local function VWSSS_fake_script() -- nil.No Wait 
+coroutine.wrap(TGQN_fake_script)()
+local function GOZC_fake_script() -- nil.No Wait 
 	local script = Instance.new('LocalScript', nil)
 
 	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
@@ -130,8 +130,8 @@ local function VWSSS_fake_script() -- nil.No Wait
 		end
 	end
 end
-coroutine.wrap(VWSSS_fake_script)()
-local function JSHVETH_fake_script() -- nil.Fireworks 
+coroutine.wrap(GOZC_fake_script)()
+local function EGCJP_fake_script() -- nil.Fireworks 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getgc()) do 
@@ -144,8 +144,8 @@ local function JSHVETH_fake_script() -- nil.Fireworks
 		end
 	end
 end
-coroutine.wrap(JSHVETH_fake_script)()
-local function PAXJ_fake_script() -- nil.CTRL DELTE 
+coroutine.wrap(EGCJP_fake_script)()
+local function JTALANS_fake_script() -- nil.CTRL DELTE 
 	local script = Instance.new('LocalScript', nil)
 
 	local Plr = game:GetService("Players").LocalPlayer
@@ -157,15 +157,15 @@ local function PAXJ_fake_script() -- nil.CTRL DELTE
 		Mouse.Target:Destroy()
 	end)
 end
-coroutine.wrap(PAXJ_fake_script)()
-local function QLXSBE_fake_script() -- nil.No Doors 
+coroutine.wrap(JTALANS_fake_script)()
+local function OJYNLL_fake_script() -- nil.No Doors 
 	local script = Instance.new('LocalScript', nil)
 
 	game:GetService('Workspace').Doors:ClearAllChildren()
 	
 end
-coroutine.wrap(QLXSBE_fake_script)()
-local function EBIIZSZ_fake_script() -- nil.Gun Mods 
+coroutine.wrap(OJYNLL_fake_script)()
+local function KWKS_fake_script() -- nil.Gun Mods 
 	local script = Instance.new('LocalScript', nil)
 
 	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun'};
@@ -181,8 +181,8 @@ local function EBIIZSZ_fake_script() -- nil.Gun Mods
 		end;
 	end;
 end
-coroutine.wrap(EBIIZSZ_fake_script)()
-local function BCSHSG_fake_script() -- nil.Get Guns 
+coroutine.wrap(KWKS_fake_script)()
+local function WPNM_fake_script() -- nil.Get Guns 
 	local script = Instance.new('LocalScript', nil)
 
 	while true do 
@@ -194,16 +194,22 @@ local function BCSHSG_fake_script() -- nil.Get Guns
 		end
 	end
 end
-coroutine.wrap(BCSHSG_fake_script)()
-local function RELR_fake_script() -- nil.Sayer 3 
+coroutine.wrap(WPNM_fake_script)()
+local function BGJOJ_fake_script() -- nil.Sayer 3 
 	local script = Instance.new('LocalScript', nil)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Also! You are going to be give all guns and many more shits each 30 seconds!", Duration = 5
 	})
 end
-coroutine.wrap(RELR_fake_script)()
-local function LYFAPQN_fake_script() -- Script.GodMode 
+coroutine.wrap(BGJOJ_fake_script)()
+local function QJYB_fake_script() -- nil.Disable Purchase Prompts 
+	local script = Instance.new('LocalScript', nil)
+
+	game:GetService("CoreGui").PurchasePromptApp.PurchasePromptUI.Visible = false
+end
+coroutine.wrap(QJYB_fake_script)()
+local function RRXS_fake_script() -- Script.GodMode 
 	local script = Instance.new('LocalScript', Script)
 
 	local Client = {}
@@ -233,8 +239,8 @@ local function LYFAPQN_fake_script() -- Script.GodMode
 		end
 	end)
 end
-coroutine.wrap(LYFAPQN_fake_script)()
-local function BOOK_fake_script() -- Script.Inf Nitro 
+coroutine.wrap(RRXS_fake_script)()
+local function SGNKZY_fake_script() -- Script.Inf Nitro 
 	local script = Instance.new('LocalScript', Script)
 
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
@@ -251,8 +257,8 @@ local function BOOK_fake_script() -- Script.Inf Nitro
 	
 	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(BOOK_fake_script)()
-local function KHCCHN_fake_script() -- nil.Decrease False 
+coroutine.wrap(SGNKZY_fake_script)()
+local function BNSJ_fake_script() -- nil.Decrease False 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getreg()) do 
@@ -272,8 +278,8 @@ local function KHCCHN_fake_script() -- nil.Decrease False
 		end
 	end
 end
-coroutine.wrap(KHCCHN_fake_script)()
-local function ZOAJR_fake_script() -- Script.Inf Jump 
+coroutine.wrap(BNSJ_fake_script)()
+local function SCDIF_fake_script() -- Script.Inf Jump 
 	local script = Instance.new('LocalScript', Script)
 
 	local InfiniteJumpEnabled = true
@@ -292,4 +298,4 @@ local function ZOAJR_fake_script() -- Script.Inf Jump
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
 end
-coroutine.wrap(ZOAJR_fake_script)()
+coroutine.wrap(SCDIF_fake_script)()
