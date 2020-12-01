@@ -10,6 +10,9 @@ local UIGradient = Instance.new("UIGradient")
 local MadeBy = Instance.new("TextLabel")
 local Header = Instance.new("TextLabel")
 local Script = Instance.new("Folder")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -52,9 +55,39 @@ Header.TextSize = 14.000
 Script.Name = "Script"
 Script.Parent = Frame
 
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.1875, 0)
+TextLabel.Size = UDim2.new(0, 310, 0, 36)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "features:"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.401929259, 0, 0.392857134, 0)
+TextLabel_2.Size = UDim2.new(0, 56, 0, 93)
+TextLabel_2.Font = Enum.Font.GothamBlack
+TextLabel_2.Text = "No Wait, Inf Nitro, Inf Jump, CTRL Delete"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.430868179, 0, 0.40773809, 0)
+TextLabel_3.Size = UDim2.new(0, 56, 0, 140)
+TextLabel_3.Font = Enum.Font.GothamBlack
+TextLabel_3.Text = " No Doors, God Mode And Gun Mods"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
 -- Scripts:
 
-local function QFPK_fake_script() -- Frame.Rshit 
+local function ZUPRN_fake_script() -- Frame.Rshit 
 	local script = Instance.new('LocalScript', Frame)
 
 	function PopupGui()
@@ -69,24 +102,24 @@ local function QFPK_fake_script() -- Frame.Rshit
 		end
 	end)
 end
-coroutine.wrap(QFPK_fake_script)()
-local function PCGWXQK_fake_script() -- Script.Sayer 
+coroutine.wrap(ZUPRN_fake_script)()
+local function MMAFC_fake_script() -- Script.Sayer 
 	local script = Instance.new('LocalScript', Script)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Thank you for using unpacked!", Duration = 5
 	})
 end
-coroutine.wrap(PCGWXQK_fake_script)()
-local function SHBVY_fake_script() -- nil.Sayer 2 
+coroutine.wrap(MMAFC_fake_script)()
+local function NPQLY_fake_script() -- nil.Sayer 2 
 	local script = Instance.new('LocalScript', nil)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Press R Shift For More Details", Duration = 5
 	})
 end
-coroutine.wrap(SHBVY_fake_script)()
-local function UZQL_fake_script() -- nil.No Wait 
+coroutine.wrap(NPQLY_fake_script)()
+local function VWSSS_fake_script() -- nil.No Wait 
 	local script = Instance.new('LocalScript', nil)
 
 	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
@@ -97,8 +130,8 @@ local function UZQL_fake_script() -- nil.No Wait
 		end
 	end
 end
-coroutine.wrap(UZQL_fake_script)()
-local function ASFS_fake_script() -- nil.Fireworks 
+coroutine.wrap(VWSSS_fake_script)()
+local function JSHVETH_fake_script() -- nil.Fireworks 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getgc()) do 
@@ -111,8 +144,8 @@ local function ASFS_fake_script() -- nil.Fireworks
 		end
 	end
 end
-coroutine.wrap(ASFS_fake_script)()
-local function KQKIXFM_fake_script() -- nil.CTRL DELTE 
+coroutine.wrap(JSHVETH_fake_script)()
+local function PAXJ_fake_script() -- nil.CTRL DELTE 
 	local script = Instance.new('LocalScript', nil)
 
 	local Plr = game:GetService("Players").LocalPlayer
@@ -124,15 +157,53 @@ local function KQKIXFM_fake_script() -- nil.CTRL DELTE
 		Mouse.Target:Destroy()
 	end)
 end
-coroutine.wrap(KQKIXFM_fake_script)()
-local function BAMDTD_fake_script() -- nil.No Doors 
+coroutine.wrap(PAXJ_fake_script)()
+local function QLXSBE_fake_script() -- nil.No Doors 
 	local script = Instance.new('LocalScript', nil)
 
 	game:GetService('Workspace').Doors:ClearAllChildren()
 	
 end
-coroutine.wrap(BAMDTD_fake_script)()
-local function CPFMX_fake_script() -- Script.GodMode 
+coroutine.wrap(QLXSBE_fake_script)()
+local function EBIIZSZ_fake_script() -- nil.Gun Mods 
+	local script = Instance.new('LocalScript', nil)
+
+	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun'};
+	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
+		for i2, v2 in next, GunsToMod do
+			if v2 == v.Name then
+				rawset(require(v), 'MagSize', math.huge);
+				rawset(require(v), 'ReloadTime', 0);
+				rawset(require(v), 'FireFreq', math.huge);
+				rawset(require(v), 'FireAuto', true);
+				rawset(require(v), 'CamShakeMagnitude', 0);
+			end;
+		end;
+	end;
+end
+coroutine.wrap(EBIIZSZ_fake_script)()
+local function BCSHSG_fake_script() -- nil.Get Guns 
+	local script = Instance.new('LocalScript', nil)
+
+	while true do 
+		wait (30)
+		for i,v in pairs(workspace.Givers:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+		end
+	end
+end
+coroutine.wrap(BCSHSG_fake_script)()
+local function RELR_fake_script() -- nil.Sayer 3 
+	local script = Instance.new('LocalScript', nil)
+
+	require(game:GetService("ReplicatedStorage").Game.Notification).new(
+	{Text = "Also! You are going to be give all guns and many more shits each 30 seconds!", Duration = 5
+	})
+end
+coroutine.wrap(RELR_fake_script)()
+local function LYFAPQN_fake_script() -- Script.GodMode 
 	local script = Instance.new('LocalScript', Script)
 
 	local Client = {}
@@ -162,8 +233,8 @@ local function CPFMX_fake_script() -- Script.GodMode
 		end
 	end)
 end
-coroutine.wrap(CPFMX_fake_script)()
-local function KPGVR_fake_script() -- Script.Inf Nitro 
+coroutine.wrap(LYFAPQN_fake_script)()
+local function BOOK_fake_script() -- Script.Inf Nitro 
 	local script = Instance.new('LocalScript', Script)
 
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
@@ -180,8 +251,8 @@ local function KPGVR_fake_script() -- Script.Inf Nitro
 	
 	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(KPGVR_fake_script)()
-local function VEJYT_fake_script() -- nil.Decrease False 
+coroutine.wrap(BOOK_fake_script)()
+local function KHCCHN_fake_script() -- nil.Decrease False 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getreg()) do 
@@ -201,8 +272,8 @@ local function VEJYT_fake_script() -- nil.Decrease False
 		end
 	end
 end
-coroutine.wrap(VEJYT_fake_script)()
-local function JQBP_fake_script() -- Script.Inf Jump 
+coroutine.wrap(KHCCHN_fake_script)()
+local function ZOAJR_fake_script() -- Script.Inf Jump 
 	local script = Instance.new('LocalScript', Script)
 
 	local InfiniteJumpEnabled = true
@@ -221,4 +292,4 @@ local function JQBP_fake_script() -- Script.Inf Jump
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
 end
-coroutine.wrap(JQBP_fake_script)()
+coroutine.wrap(ZOAJR_fake_script)()
