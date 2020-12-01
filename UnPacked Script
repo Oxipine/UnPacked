@@ -3,18 +3,137 @@
 
 -- Instances:
 
-local Hacker = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local MadeBy = Instance.new("TextLabel")
+local Header = Instance.new("TextLabel")
+local Script = Instance.new("Folder")
 
 --Properties:
 
-Hacker.Name = "Hacker"
-Hacker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Hacker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.287577599, 0, 0.109409183, 0)
+Frame.Size = UDim2.new(0, 311, 0, 336)
+Frame.Visible = false
+
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = Frame
+
+MadeBy.Name = "Made By"
+MadeBy.Parent = Frame
+MadeBy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MadeBy.BackgroundTransparency = 1.000
+MadeBy.Position = UDim2.new(0, 0, 0.851190448, 0)
+MadeBy.Size = UDim2.new(0, 310, 0, 50)
+MadeBy.Font = Enum.Font.LuckiestGuy
+MadeBy.Text = "Made By: Oxipine#6857"
+MadeBy.TextColor3 = Color3.fromRGB(0, 0, 0)
+MadeBy.TextSize = 14.000
+
+Header.Name = "Header"
+Header.Parent = Frame
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.Position = UDim2.new(-0.00598832965, 0, -0.000709846616, 0)
+Header.Size = UDim2.new(0, 311, 0, 50)
+Header.Font = Enum.Font.GothamBlack
+Header.Text = "UnPacked"
+Header.TextColor3 = Color3.fromRGB(0, 0, 0)
+Header.TextSize = 14.000
+
+Script.Name = "Script"
+Script.Parent = Frame
 
 -- Scripts:
 
-local function NFRT_fake_script() -- Hacker.God Mode 
-	local script = Instance.new('LocalScript', Hacker)
+local function QFPK_fake_script() -- Frame.Rshit 
+	local script = Instance.new('LocalScript', Frame)
+
+	function PopupGui()
+		if script.Parent.Visible == true then script.Parent.Visible = false
+		else script.Parent.Visible = true
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(key)
+		if key.KeyCode == Enum.KeyCode.RightShift then
+			PopupGui()
+		end
+	end)
+end
+coroutine.wrap(QFPK_fake_script)()
+local function PCGWXQK_fake_script() -- Script.Sayer 
+	local script = Instance.new('LocalScript', Script)
+
+	require(game:GetService("ReplicatedStorage").Game.Notification).new(
+	{Text = "Thank you for using unpacked!", Duration = 5
+	})
+end
+coroutine.wrap(PCGWXQK_fake_script)()
+local function SHBVY_fake_script() -- nil.Sayer 2 
+	local script = Instance.new('LocalScript', nil)
+
+	require(game:GetService("ReplicatedStorage").Game.Notification).new(
+	{Text = "Press R Shift For More Details", Duration = 5
+	})
+end
+coroutine.wrap(SHBVY_fake_script)()
+local function UZQL_fake_script() -- nil.No Wait 
+	local script = Instance.new('LocalScript', nil)
+
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(UZQL_fake_script)()
+local function ASFS_fake_script() -- nil.Fireworks 
+	local script = Instance.new('LocalScript', nil)
+
+	for a,b in pairs(getgc()) do 
+		if typeof(b) == "function" then 
+			for c,d in pairs(debug.getupvalues(b)) do 
+				if typeof(d) == "table" and rawget(d,"Fireworks") then
+					d.Fireworks(math.huge)
+				end
+			end
+		end
+	end
+end
+coroutine.wrap(ASFS_fake_script)()
+local function KQKIXFM_fake_script() -- nil.CTRL DELTE 
+	local script = Instance.new('LocalScript', nil)
+
+	local Plr = game:GetService("Players").LocalPlayer
+	local Mouse = Plr:GetMouse()
+	
+	Mouse.Button1Down:connect(function()
+		if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+		if not Mouse.Target then return end
+		Mouse.Target:Destroy()
+	end)
+end
+coroutine.wrap(KQKIXFM_fake_script)()
+local function BAMDTD_fake_script() -- nil.No Doors 
+	local script = Instance.new('LocalScript', nil)
+
+	game:GetService('Workspace').Doors:ClearAllChildren()
+	
+end
+coroutine.wrap(BAMDTD_fake_script)()
+local function CPFMX_fake_script() -- Script.GodMode 
+	local script = Instance.new('LocalScript', Script)
 
 	local Client = {}
 	
@@ -43,51 +162,27 @@ local function NFRT_fake_script() -- Hacker.God Mode
 		end
 	end)
 end
-coroutine.wrap(NFRT_fake_script)()
-local function VCOJMLE_fake_script() -- Hacker.Gun Mods 
-	local script = Instance.new('LocalScript', Hacker)
+coroutine.wrap(CPFMX_fake_script)()
+local function KPGVR_fake_script() -- Script.Inf Nitro 
+	local script = Instance.new('LocalScript', Script)
 
-	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun, Taser'};
-	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
-		for i2, v2 in next, GunsToMod do
-			if v2 == v.Name then
-				rawset(require(v), 'MagSize', math.huge);
-				rawset(require(v), 'ReloadTime', 0);
-				rawset(require(v), 'FireFreq', math.huge);
-				rawset(require(v), 'FireAuto', true);
-				rawset(require(v), 'CamShakeMagnitude', 0);
-			end;
-		end;
-	end;
-end
-coroutine.wrap(VCOJMLE_fake_script)()
-local function MHSGKN_fake_script() -- Hacker.CTRL Destroy 
-	local script = Instance.new('LocalScript', Hacker)
-
-	local Plr = game:GetService("Players").LocalPlayer
-	local Mouse = Plr:GetMouse()
+	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
 	
-	Mouse.Button1Down:connect(function()
-		if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-		if not Mouse.Target then return end
-		Mouse.Target:Destroy()
-	end)
-end
-coroutine.wrap(MHSGKN_fake_script)()
-local function CPQOCGY_fake_script() -- Hacker.No Wait 
-	local script = Instance.new('LocalScript', Hacker)
-
-	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-	while wait() do
-		for i,v in pairs (UI.CircleAction.Specs) do
-			v.Duration = 0;
-			v.Timed = true;
+	local function hotkeyHandler(key)
+		if (key == 'q') then
+			for _, v in next, getgc(true) do
+				if (type(v) == 'table' and rawget(v, 'Nitro')) then
+					v.Nitro = 250
+				end
+			end
 		end
 	end
+	
+	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(CPQOCGY_fake_script)()
-local function RGAZII_fake_script() -- Hacker.Inf Nitro Decreser = false 
-	local script = Instance.new('LocalScript', Hacker)
+coroutine.wrap(KPGVR_fake_script)()
+local function VEJYT_fake_script() -- nil.Decrease False 
+	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getreg()) do 
 		if typeof(b) == "function" then 
@@ -106,27 +201,9 @@ local function RGAZII_fake_script() -- Hacker.Inf Nitro Decreser = false
 		end
 	end
 end
-coroutine.wrap(RGAZII_fake_script)()
-local function LYJNY_fake_script() -- Hacker.no doors 
-	local script = Instance.new('LocalScript', Hacker)
-
-	game:GetService('Workspace').Doors:ClearAllChildren()
-end
-coroutine.wrap(LYJNY_fake_script)()
-local function ATUMTL_fake_script() -- Hacker.Inf Jetpack Fuel 
-	local script = Instance.new('LocalScript', Hacker)
-
-	for _, v in next, getgc(true) do
-		if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
-			v.LocalMaxFuel = math.huge
-			v.LocalFuel = math.huge
-			v.LocalFuelType = 'Rocket'
-		end
-	end
-end
-coroutine.wrap(ATUMTL_fake_script)()
-local function NKHTJ_fake_script() -- Hacker.Inf Jump 
-	local script = Instance.new('LocalScript', Hacker)
+coroutine.wrap(VEJYT_fake_script)()
+local function JQBP_fake_script() -- Script.Inf Jump 
+	local script = Instance.new('LocalScript', Script)
 
 	local InfiniteJumpEnabled = true
 	game:GetService("UserInputService").JumpRequest:connect(function()
@@ -144,35 +221,4 @@ local function NKHTJ_fake_script() -- Hacker.Inf Jump
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
 end
-coroutine.wrap(NKHTJ_fake_script)()
-local function DIPOIQ_fake_script() -- Hacker.INf Nitro 
-	local script = Instance.new('LocalScript', Hacker)
-
-	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
-	
-	local function hotkeyHandler(key)
-		if (key == 'q') then
-			for _, v in next, getgc(true) do
-				if (type(v) == 'table' and rawget(v, 'Nitro')) then
-					v.Nitro = 250
-				end
-			end
-		end
-	end
-	
-	mouse.KeyDown:connect(hotkeyHandler)
-end
-coroutine.wrap(DIPOIQ_fake_script)()
-local function AHXLRTU_fake_script() -- Hacker.WEE 
-	local script = Instance.new('LocalScript', Hacker)
-
-	while true do 
-		wait (30)
-		for i,v in pairs(workspace.Givers:GetDescendants()) do
-			if v:IsA("ClickDetector") then
-				fireclickdetector(v)
-			end
-		end
-	end
-end
-coroutine.wrap(AHXLRTU_fake_script)()
+coroutine.wrap(JQBP_fake_script)()
