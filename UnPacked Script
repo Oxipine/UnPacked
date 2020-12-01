@@ -3,181 +3,66 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Text = Instance.new("Folder")
-local Text_2 = Instance.new("TextLabel")
-local Text_3 = Instance.new("TextLabel")
-local Header = Instance.new("TextLabel")
-local Credits = Instance.new("TextLabel")
+local Hacker = Instance.new("ScreenGui")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0, -50, 0.5, -50)
-Frame.Size = UDim2.new(0, 334, 0, 342)
-
-UICorner.Parent = Frame
-
-Text.Name = "Text"
-Text.Parent = Frame
-
-Text_2.Name = "Text"
-Text_2.Parent = Text
-Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text_2.BackgroundTransparency = 1.000
-Text_2.Position = UDim2.new(0, 0, 0.146198824, 0)
-Text_2.Size = UDim2.new(0, 334, 0, 128)
-Text_2.Font = Enum.Font.DenkOne
-Text_2.Text = "No wait, Inf Jump,nitro,jetpack fuel are on with noclip too "
-Text_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Text_2.TextSize = 17.000
-Text_2.TextWrapped = true
-
-Text_3.Name = "Text"
-Text_3.Parent = Text
-Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text_3.BackgroundTransparency = 1.000
-Text_3.Position = UDim2.new(0, 0, 0.242690101, 0)
-Text_3.Size = UDim2.new(0, 334, 0, 128)
-Text_3.Font = Enum.Font.DenkOne
-Text_3.Text = "And Ctrl Delete Are On By Default"
-Text_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Text_3.TextSize = 17.000
-Text_3.TextWrapped = true
-
-Header.Name = "Header"
-Header.Parent = Text
-Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Header.BackgroundTransparency = 1.000
-Header.Size = UDim2.new(0, 334, 0, 50)
-Header.Font = Enum.Font.DenkOne
-Header.Text = "UnPacked"
-Header.TextColor3 = Color3.fromRGB(0, 0, 0)
-Header.TextScaled = true
-Header.TextSize = 14.000
-Header.TextWrapped = true
-
-Credits.Name = "Credits"
-Credits.Parent = Text
-Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Credits.BackgroundTransparency = 1.000
-Credits.Position = UDim2.new(0, 0, 0.853801191, 0)
-Credits.Size = UDim2.new(0, 334, 0, 50)
-Credits.Font = Enum.Font.LuckiestGuy
-Credits.Text = "Made By Oxipine#6857"
-Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
-Credits.TextSize = 14.000
+Hacker.Name = "Hacker"
+Hacker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Hacker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function YYTNPU_fake_script() -- Frame.Rshit 
-	local script = Instance.new('LocalScript', Frame)
+local function NFRT_fake_script() -- Hacker.God Mode 
+	local script = Instance.new('LocalScript', Hacker)
 
-	function PopupGui()
-		if script.Parent.Visible == true then script.Parent.Visible = false
-		else script.Parent.Visible = true
-		end
-	end
+	local Client = {}
 	
-	game:GetService("UserInputService").InputBegan:Connect(function(key)
-		if key.KeyCode == Enum.KeyCode.RightShift then
-			PopupGui()
+	for i,v in pairs(debug.getregistry()) do
+		if typeof(v) == "function" then
+			for i2,v2 in pairs(debug.getupvalues(v)) do
+				if typeof(v2) == "table" and v2.FireServer then
+					Client.FireServerT = v2
+				end
+			end
+		end    
+	end    
+	
+	
+	game:GetService('RunService').RenderStepped:connect(function()
+		wait(0.1)
+		if game.Workspace[game.Players.LocalPlayer.Name].Humanoid.Health < 100 then
+			Client.FireServerT:FireServer(unpack({
+				[1] = "dd96918e",
+				[2] = "Donut"
+			}))
+			wait(0.1)  
+			Client.FireServerT:FireServer(unpack({
+				[1] = "f205949f"
+			}))
 		end
 	end)
 end
-coroutine.wrap(YYTNPU_fake_script)()
-local function CSKYWUU_fake_script() -- Frame.Dragify 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(NFRT_fake_script)()
+local function VCOJMLE_fake_script() -- Hacker.Gun Mods 
+	local script = Instance.new('LocalScript', Hacker)
 
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    dragToggle = nil
-	    local dragSpeed = 0.25
-	    dragInput = nil
-	    dragStart = nil
-	    local dragPos = nil
-	    function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
-	    end
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-	    end)
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-	    end)
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
-	
-	--Dont use with other GUIs etc without my P3rm1ss10N! -W0lfy
+	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun, Taser'};
+	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
+		for i2, v2 in next, GunsToMod do
+			if v2 == v.Name then
+				rawset(require(v), 'MagSize', math.huge);
+				rawset(require(v), 'ReloadTime', 0);
+				rawset(require(v), 'FireFreq', math.huge);
+				rawset(require(v), 'FireAuto', true);
+				rawset(require(v), 'CamShakeMagnitude', 0);
+			end;
+		end;
+	end;
 end
-coroutine.wrap(CSKYWUU_fake_script)()
-local function BICPFD_fake_script() -- Frame.PositioningScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	--//Scripted by Sochi\\
-	-- script.Parent.Position = UDim2.new(0, 100, 0, -1000)
-	script.Parent:TweenPosition(UDim2.new(0.1, 0, 0.1, 0), "Out", "Quad", 1)
-	script.Parent.Draggable = true
-end
-coroutine.wrap(BICPFD_fake_script)()
-local function EHHZSS_fake_script() -- Frame.Inf Nitro 
-	local script = Instance.new('LocalScript', Frame)
-
-	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
-	
-	local function hotkeyHandler(key)
-		if (key == 'q') then
-			for _, v in next, getgc(true) do
-				if (type(v) == 'table' and rawget(v, 'Nitro')) then
-					v.Nitro = 250
-				end
-			end
-		end
-	end
-	
-	mouse.KeyDown:connect(hotkeyHandler)
-end
-coroutine.wrap(EHHZSS_fake_script)()
-local function TLNS_fake_script() -- Frame.No Wait 
-	local script = Instance.new('LocalScript', Frame)
-
-	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-	while wait() do
-		for i,v in pairs (UI.CircleAction.Specs) do
-			v.Duration = 0;
-			v.Timed = true;
-		end
-	end
-end
-coroutine.wrap(TLNS_fake_script)()
-local function QZRH_fake_script() -- Frame.Noclip 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(VCOJMLE_fake_script)()
+local function MHSGKN_fake_script() -- Hacker.CTRL Destroy 
+	local script = Instance.new('LocalScript', Hacker)
 
 	local Plr = game:GetService("Players").LocalPlayer
 	local Mouse = Plr:GetMouse()
@@ -188,32 +73,60 @@ local function QZRH_fake_script() -- Frame.Noclip
 		Mouse.Target:Destroy()
 	end)
 end
-coroutine.wrap(QZRH_fake_script)()
-local function KZMBDP_fake_script() -- Frame.Inf JetPack Fuel 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(MHSGKN_fake_script)()
+local function CPQOCGY_fake_script() -- Hacker.No Wait 
+	local script = Instance.new('LocalScript', Hacker)
 
-	repeat 
-		for _, v in next, getgc(true) do
-			if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
-				v.LocalMaxFuel = math.huge
-				v.LocalFuel = math.huge
-				v.LocalFuelType = 'Rocket'
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(CPQOCGY_fake_script)()
+local function RGAZII_fake_script() -- Hacker.Inf Nitro Decreser = false 
+	local script = Instance.new('LocalScript', Hacker)
+
+	for a,b in pairs(getreg()) do 
+		if typeof(b) == "function" then 
+			for c,d in pairs(debug.getupvalues(b)) do 
+				if typeof(d) == "table" and d.FireServer then
+					local FS = d.FireServer
+					d.FireServer = function(a1, ...)
+						if typeof(({...})[2]) == "number" and game:GetService("Players").LocalPlayer.Character:FindFirstChild("InVehicle") then 
+							return FS(a1, ({...})[1], -math.huge)
+						else
+							return FS(a1, ...)
+						end
+					end
+				end
 			end
 		end
-		
-		print "Hdws"
-	until 10000000000000000000000000000000000000000000000000
+	end
 end
-coroutine.wrap(KZMBDP_fake_script)()
-local function FCVN_fake_script() -- Frame.Ctrl Delete 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(RGAZII_fake_script)()
+local function LYJNY_fake_script() -- Hacker.no doors 
+	local script = Instance.new('LocalScript', Hacker)
 
-	print("Hello world!")
-	
+	game:GetService('Workspace').Doors:ClearAllChildren()
 end
-coroutine.wrap(FCVN_fake_script)()
-local function BBEY_fake_script() -- Frame.Inf Jump 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(LYJNY_fake_script)()
+local function ATUMTL_fake_script() -- Hacker.Inf Jetpack Fuel 
+	local script = Instance.new('LocalScript', Hacker)
+
+	for _, v in next, getgc(true) do
+		if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
+			v.LocalMaxFuel = math.huge
+			v.LocalFuel = math.huge
+			v.LocalFuelType = 'Rocket'
+		end
+	end
+end
+coroutine.wrap(ATUMTL_fake_script)()
+local function NKHTJ_fake_script() -- Hacker.Inf Jump 
+	local script = Instance.new('LocalScript', Hacker)
 
 	local InfiniteJumpEnabled = true
 	game:GetService("UserInputService").JumpRequest:connect(function()
@@ -231,4 +144,35 @@ local function BBEY_fake_script() -- Frame.Inf Jump
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
 end
-coroutine.wrap(BBEY_fake_script)()
+coroutine.wrap(NKHTJ_fake_script)()
+local function DIPOIQ_fake_script() -- Hacker.INf Nitro 
+	local script = Instance.new('LocalScript', Hacker)
+
+	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
+	
+	local function hotkeyHandler(key)
+		if (key == 'q') then
+			for _, v in next, getgc(true) do
+				if (type(v) == 'table' and rawget(v, 'Nitro')) then
+					v.Nitro = 250
+				end
+			end
+		end
+	end
+	
+	mouse.KeyDown:connect(hotkeyHandler)
+end
+coroutine.wrap(DIPOIQ_fake_script)()
+local function AHXLRTU_fake_script() -- Hacker.WEE 
+	local script = Instance.new('LocalScript', Hacker)
+
+	while true do 
+		wait (30)
+		for i,v in pairs(workspace.Givers:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+		end
+	end
+end
+coroutine.wrap(AHXLRTU_fake_script)()
