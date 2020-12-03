@@ -1,3 +1,191 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AllMiscInShit = Instance.new("ScreenGui")
+local Script = Instance.new("Folder")
+
+--Properties:
+
+AllMiscInShit.Name = "All Misc In Shit"
+AllMiscInShit.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AllMiscInShit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Script.Name = "Script"
+Script.Parent = AllMiscInShit
+
+-- Scripts:
+
+local function QCLBMKM_fake_script() -- Script.Unpacked Local Scripts 
+	local script = Instance.new('LocalScript', Script)
+
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
-	{Text = "UnPacked Is Currently Down, Will Be Back Up Soon", Duration = 5
+	{Text = "Thank You For Using UnPacked!", Duration = 5
 	})
+end
+coroutine.wrap(QCLBMKM_fake_script)()
+local function GSDWTO_fake_script() -- nil.CTRL Delete 
+	local script = Instance.new('LocalScript', nil)
+
+	local Plr = game:GetService("Players").LocalPlayer
+	local Mouse = Plr:GetMouse()
+	
+	Mouse.Button1Down:connect(function()
+		if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+		if not Mouse.Target then return end
+		Mouse.Target:Destroy()
+	end)
+end
+coroutine.wrap(GSDWTO_fake_script)()
+local function RLWJ_fake_script() -- nil.Inf Nitro 
+	local script = Instance.new('LocalScript', nil)
+
+	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
+	
+	local function hotkeyHandler(key)
+		if (key == 'q') then
+			for _, v in next, getgc(true) do
+				if (type(v) == 'table' and rawget(v, 'Nitro')) then
+					v.Nitro = 250
+				end
+			end
+		end
+	end
+	
+	mouse.KeyDown:connect(hotkeyHandler)
+end
+coroutine.wrap(RLWJ_fake_script)()
+local function DDBUFCK_fake_script() -- nil.Decrease False 
+	local script = Instance.new('LocalScript', nil)
+
+	for a,b in pairs(getreg()) do 
+		if typeof(b) == "function" then 
+			for c,d in pairs(debug.getupvalues(b)) do 
+				if typeof(d) == "table" and d.FireServer then
+					local FS = d.FireServer
+					d.FireServer = function(a1, ...)
+						if typeof(({...})[2]) == "number" and game:GetService("Players").LocalPlayer.Character:FindFirstChild("InVehicle") then 
+							return FS(a1, ({...})[1], -math.huge)
+						else
+							return FS(a1, ...)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+coroutine.wrap(DDBUFCK_fake_script)()
+local function PAYCLOH_fake_script() -- nil.Inf Jetpack fuel 
+	local script = Instance.new('LocalScript', nil)
+
+	while true do
+		for _, v in next, getgc(true) do
+			if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
+				v.LocalMaxFuel = math.huge
+				v.LocalFuel = math.huge
+				v.LocalFuelType = 'Rocket'
+			end
+		end
+	end
+end
+coroutine.wrap(PAYCLOH_fake_script)()
+local function KXWF_fake_script() -- nil.UnPacked Script Sayer 2 
+	local script = Instance.new('LocalScript', nil)
+
+	require(game:GetService("ReplicatedStorage").Game.Notification).new(
+	{Text = "Join Our Discord For Daily Updates And More Scripts :D.Discord.io/UnPacked.", Duration = 5
+	})
+end
+coroutine.wrap(KXWF_fake_script)()
+local function HBLPQY_fake_script() -- nil.No Wait 
+	local script = Instance.new('LocalScript', nil)
+
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(HBLPQY_fake_script)()
+local function HMYDVZH_fake_script() -- nil.Inf Jump 
+	local script = Instance.new('LocalScript', nil)
+
+	local InfiniteJumpEnabled = true
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		if InfiniteJumpEnabled then
+			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+		end
+	end)
+	local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
+	InfiniteJump.Position = UDim2.new(0,10,0,130)
+	InfiniteJump.Size = UDim2.new(0,150,0,30)
+	InfiniteJump.MouseButton1Click:connect(function()
+		local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
+		local new = state == "Off" and "On" or state == "On" and "Off"
+		InfiniteJumpEnabled = new == "On"
+		InfiniteJump.Text = "Infinite Jump: " .. new
+	end)
+end
+coroutine.wrap(HMYDVZH_fake_script)()
+local function RWWVTCU_fake_script() -- nil.Gun Mods 
+	local script = Instance.new('LocalScript', nil)
+
+	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun', 'Taser'};
+	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
+		for i2, v2 in next, GunsToMod do
+			if v2 == v.Name then
+				rawset(require(v), 'MagSize', math.huge);
+				rawset(require(v), 'ReloadTime', 0);
+				rawset(require(v), 'FireFreq', math.huge);
+				rawset(require(v), 'FireAuto', true);
+				rawset(require(v), 'CamShakeMagnitude', 0);
+			end;
+		end;
+	end;
+end
+coroutine.wrap(RWWVTCU_fake_script)()
+local function CDSV_fake_script() -- nil.God Mode 
+	local script = Instance.new('LocalScript', nil)
+
+	local Client = {}
+	
+	for i,v in pairs(debug.getregistry()) do
+		if typeof(v) == "function" then
+			for i2,v2 in pairs(debug.getupvalues(v)) do
+				if typeof(v2) == "table" and v2.FireServer then
+					Client.FireServerT = v2
+				end
+			end
+		end    
+	end    
+	
+	
+	game:GetService('RunService').RenderStepped:connect(function()
+		wait(0.1)
+		if game.Workspace[game.Players.LocalPlayer.Name].Humanoid.Health < 100 then
+			Client.FireServerT:FireServer(unpack({
+				[1] = "dd96918e",
+				[2] = "Donut"
+			}))
+			wait(0.1)  
+			Client.FireServerT:FireServer(unpack({
+				[1] = "f205949f"
+			}))
+		end
+	end)
+end
+coroutine.wrap(CDSV_fake_script)()
+local function OXOWDAG_fake_script() -- nil.Anti Rag 
+	local script = Instance.new('LocalScript', nil)
+
+	for i,v in next, getgc() do
+		if type(v) == "table" and rawget(v, 'Ragdoll') and rawget(v, 'Unragdoll') then
+			v.Ragdoll = function() return wait(9e9) end
+		end
+	end
+end
+coroutine.wrap(OXOWDAG_fake_script)()
