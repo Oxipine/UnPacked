@@ -17,15 +17,15 @@ Script.Parent = AllMiscInShit
 
 -- Scripts:
 
-local function QCLBMKM_fake_script() -- Script.Unpacked Local Scripts 
+local function YZPULBL_fake_script() -- Script.Unpacked Local Scripts 
 	local script = Instance.new('LocalScript', Script)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Thank You For Using UnPacked!", Duration = 5
 	})
 end
-coroutine.wrap(QCLBMKM_fake_script)()
-local function GSDWTO_fake_script() -- nil.CTRL Delete 
+coroutine.wrap(YZPULBL_fake_script)()
+local function OCVEN_fake_script() -- nil.CTRL Delete 
 	local script = Instance.new('LocalScript', nil)
 
 	local Plr = game:GetService("Players").LocalPlayer
@@ -37,8 +37,8 @@ local function GSDWTO_fake_script() -- nil.CTRL Delete
 		Mouse.Target:Destroy()
 	end)
 end
-coroutine.wrap(GSDWTO_fake_script)()
-local function RLWJ_fake_script() -- nil.Inf Nitro 
+coroutine.wrap(OCVEN_fake_script)()
+local function VQWZK_fake_script() -- nil.Inf Nitro 
 	local script = Instance.new('LocalScript', nil)
 
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
@@ -55,8 +55,8 @@ local function RLWJ_fake_script() -- nil.Inf Nitro
 	
 	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(RLWJ_fake_script)()
-local function DDBUFCK_fake_script() -- nil.Decrease False 
+coroutine.wrap(VQWZK_fake_script)()
+local function CGAOWM_fake_script() -- nil.Decrease False 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getreg()) do 
@@ -76,8 +76,8 @@ local function DDBUFCK_fake_script() -- nil.Decrease False
 		end
 	end
 end
-coroutine.wrap(DDBUFCK_fake_script)()
-local function PAYCLOH_fake_script() -- nil.Inf Jetpack fuel 
+coroutine.wrap(CGAOWM_fake_script)()
+local function ZBUTYWQ_fake_script() -- nil.Inf Jetpack fuel 
 	local script = Instance.new('LocalScript', nil)
 
 	while true do
@@ -90,16 +90,16 @@ local function PAYCLOH_fake_script() -- nil.Inf Jetpack fuel
 		end
 	end
 end
-coroutine.wrap(PAYCLOH_fake_script)()
-local function KXWF_fake_script() -- nil.UnPacked Script Sayer 2 
+coroutine.wrap(ZBUTYWQ_fake_script)()
+local function RXMPJMH_fake_script() -- nil.UnPacked Script Sayer 2 
 	local script = Instance.new('LocalScript', nil)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Join Our Discord For Daily Updates And More Scripts :D.Discord.io/UnPacked.", Duration = 5
 	})
 end
-coroutine.wrap(KXWF_fake_script)()
-local function HBLPQY_fake_script() -- nil.No Wait 
+coroutine.wrap(RXMPJMH_fake_script)()
+local function ARKXJL_fake_script() -- nil.No Wait 
 	local script = Instance.new('LocalScript', nil)
 
 	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
@@ -110,8 +110,8 @@ local function HBLPQY_fake_script() -- nil.No Wait
 		end
 	end
 end
-coroutine.wrap(HBLPQY_fake_script)()
-local function HMYDVZH_fake_script() -- nil.Inf Jump 
+coroutine.wrap(ARKXJL_fake_script)()
+local function UVROQYJ_fake_script() -- nil.Inf Jump 
 	local script = Instance.new('LocalScript', nil)
 
 	local InfiniteJumpEnabled = true
@@ -130,8 +130,8 @@ local function HMYDVZH_fake_script() -- nil.Inf Jump
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
 end
-coroutine.wrap(HMYDVZH_fake_script)()
-local function RWWVTCU_fake_script() -- nil.Gun Mods 
+coroutine.wrap(UVROQYJ_fake_script)()
+local function GDYLD_fake_script() -- nil.Gun Mods 
 	local script = Instance.new('LocalScript', nil)
 
 	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun', 'Taser'};
@@ -147,8 +147,8 @@ local function RWWVTCU_fake_script() -- nil.Gun Mods
 		end;
 	end;
 end
-coroutine.wrap(RWWVTCU_fake_script)()
-local function CDSV_fake_script() -- nil.God Mode 
+coroutine.wrap(GDYLD_fake_script)()
+local function NIJD_fake_script() -- nil.God Mode 
 	local script = Instance.new('LocalScript', nil)
 
 	local Client = {}
@@ -178,8 +178,8 @@ local function CDSV_fake_script() -- nil.God Mode
 		end
 	end)
 end
-coroutine.wrap(CDSV_fake_script)()
-local function OXOWDAG_fake_script() -- nil.Anti Rag 
+coroutine.wrap(NIJD_fake_script)()
+local function TYEXHPP_fake_script() -- nil.Anti Rag 
 	local script = Instance.new('LocalScript', nil)
 
 	for i,v in next, getgc() do
@@ -188,4 +188,34 @@ local function OXOWDAG_fake_script() -- nil.Anti Rag
 		end
 	end
 end
-coroutine.wrap(OXOWDAG_fake_script)()
+coroutine.wrap(TYEXHPP_fake_script)()
+local function XSRVIO_fake_script() -- nil.No Doors 
+	local script = Instance.new('LocalScript', nil)
+
+	for i,v in pairs(workspace:GetDescendants()) do
+		if v.Name == "SwingDoor" then
+			v:Destroy()
+		end
+	end
+end
+coroutine.wrap(XSRVIO_fake_script)()
+local function KYVCVV_fake_script() -- nil.No Cell Doors 
+	local script = Instance.new('LocalScript', nil)
+
+	for i,v in pairs(workspace:GetDescendants()) do
+		if v.Name == "Door" then
+			v:Destroy()
+		end
+	end
+end
+coroutine.wrap(KYVCVV_fake_script)()
+local function HTXXBGA_fake_script() -- nil.No Bank Doors 
+	local script = Instance.new('LocalScript', nil)
+
+	for i,v in pairs(workspace:GetDescendants()) do
+		if v.Name == "SlideDoor" then
+			v:Destroy()
+		end
+	end
+end
+coroutine.wrap(HTXXBGA_fake_script)()
