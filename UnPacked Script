@@ -17,15 +17,15 @@ Script.Parent = AllMiscInShit
 
 -- Scripts:
 
-local function YZPULBL_fake_script() -- Script.Unpacked Local Scripts 
+local function OWDDY_fake_script() -- Script.Unpacked Local Scripts 
 	local script = Instance.new('LocalScript', Script)
 
 	require(game:GetService("ReplicatedStorage").Game.Notification).new(
 	{Text = "Thank You For Using UnPacked!", Duration = 5
 	})
 end
-coroutine.wrap(YZPULBL_fake_script)()
-local function OCVEN_fake_script() -- nil.CTRL Delete 
+coroutine.wrap(OWDDY_fake_script)()
+local function EBSLQ_fake_script() -- nil.CTRL Delete 
 	local script = Instance.new('LocalScript', nil)
 
 	local Plr = game:GetService("Players").LocalPlayer
@@ -37,8 +37,8 @@ local function OCVEN_fake_script() -- nil.CTRL Delete
 		Mouse.Target:Destroy()
 	end)
 end
-coroutine.wrap(OCVEN_fake_script)()
-local function VQWZK_fake_script() -- nil.Inf Nitro 
+coroutine.wrap(EBSLQ_fake_script)()
+local function MMMYPVP_fake_script() -- nil.Inf Nitro 
 	local script = Instance.new('LocalScript', nil)
 
 	local mouse = game:GetService('Players').LocalPlayer:GetMouse()
@@ -55,8 +55,8 @@ local function VQWZK_fake_script() -- nil.Inf Nitro
 	
 	mouse.KeyDown:connect(hotkeyHandler)
 end
-coroutine.wrap(VQWZK_fake_script)()
-local function CGAOWM_fake_script() -- nil.Decrease False 
+coroutine.wrap(MMMYPVP_fake_script)()
+local function HNKG_fake_script() -- nil.Decrease False 
 	local script = Instance.new('LocalScript', nil)
 
 	for a,b in pairs(getreg()) do 
@@ -76,79 +76,8 @@ local function CGAOWM_fake_script() -- nil.Decrease False
 		end
 	end
 end
-coroutine.wrap(CGAOWM_fake_script)()
-local function ZBUTYWQ_fake_script() -- nil.Inf Jetpack fuel 
-	local script = Instance.new('LocalScript', nil)
-
-	while true do
-		for _, v in next, getgc(true) do
-			if (type(v) == 'table' and rawget(v, 'LocalMaxFuel')) then
-				v.LocalMaxFuel = math.huge
-				v.LocalFuel = math.huge
-				v.LocalFuelType = 'Rocket'
-			end
-		end
-	end
-end
-coroutine.wrap(ZBUTYWQ_fake_script)()
-local function RXMPJMH_fake_script() -- nil.UnPacked Script Sayer 2 
-	local script = Instance.new('LocalScript', nil)
-
-	require(game:GetService("ReplicatedStorage").Game.Notification).new(
-	{Text = "Join Our Discord For Daily Updates And More Scripts :D.Discord.io/UnPacked.", Duration = 5
-	})
-end
-coroutine.wrap(RXMPJMH_fake_script)()
-local function ARKXJL_fake_script() -- nil.No Wait 
-	local script = Instance.new('LocalScript', nil)
-
-	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
-	while wait() do
-		for i,v in pairs (UI.CircleAction.Specs) do
-			v.Duration = 0;
-			v.Timed = true;
-		end
-	end
-end
-coroutine.wrap(ARKXJL_fake_script)()
-local function UVROQYJ_fake_script() -- nil.Inf Jump 
-	local script = Instance.new('LocalScript', nil)
-
-	local InfiniteJumpEnabled = true
-	game:GetService("UserInputService").JumpRequest:connect(function()
-		if InfiniteJumpEnabled then
-			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-		end
-	end)
-	local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
-	InfiniteJump.Position = UDim2.new(0,10,0,130)
-	InfiniteJump.Size = UDim2.new(0,150,0,30)
-	InfiniteJump.MouseButton1Click:connect(function()
-		local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
-		local new = state == "Off" and "On" or state == "On" and "Off"
-		InfiniteJumpEnabled = new == "On"
-		InfiniteJump.Text = "Infinite Jump: " .. new
-	end)
-end
-coroutine.wrap(UVROQYJ_fake_script)()
-local function GDYLD_fake_script() -- nil.Gun Mods 
-	local script = Instance.new('LocalScript', nil)
-
-	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun', 'Taser'};
-	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
-		for i2, v2 in next, GunsToMod do
-			if v2 == v.Name then
-				rawset(require(v), 'MagSize', math.huge);
-				rawset(require(v), 'ReloadTime', 0);
-				rawset(require(v), 'FireFreq', math.huge);
-				rawset(require(v), 'FireAuto', true);
-				rawset(require(v), 'CamShakeMagnitude', 0);
-			end;
-		end;
-	end;
-end
-coroutine.wrap(GDYLD_fake_script)()
-local function NIJD_fake_script() -- nil.God Mode 
+coroutine.wrap(HNKG_fake_script)()
+local function CRTGF_fake_script() -- nil.God Mode 
 	local script = Instance.new('LocalScript', nil)
 
 	local Client = {}
@@ -178,18 +107,25 @@ local function NIJD_fake_script() -- nil.God Mode
 		end
 	end)
 end
-coroutine.wrap(NIJD_fake_script)()
-local function TYEXHPP_fake_script() -- nil.Anti Rag 
+coroutine.wrap(CRTGF_fake_script)()
+local function GDKLJVH_fake_script() -- nil.Gun Mods 
 	local script = Instance.new('LocalScript', nil)
 
-	for i,v in next, getgc() do
-		if type(v) == "table" and rawget(v, 'Ragdoll') and rawget(v, 'Unragdoll') then
-			v.Ragdoll = function() return wait(9e9) end
-		end
-	end
+	local GunsToMod = {'Pistol', 'AK47', 'Uzi', 'Revolver', 'Sniper', 'Shotgun', 'Taser'};
+	for i,v in next, game:GetService('ReplicatedStorage').Game.ItemConfig:GetChildren() do
+		for i2, v2 in next, GunsToMod do
+			if v2 == v.Name then
+				rawset(require(v), 'MagSize', math.huge);
+				rawset(require(v), 'ReloadTime', 0);
+				rawset(require(v), 'FireFreq', math.huge);
+				rawset(require(v), 'FireAuto', true);
+				rawset(require(v), 'CamShakeMagnitude', 0);
+			end;
+		end;
+	end;
 end
-coroutine.wrap(TYEXHPP_fake_script)()
-local function XSRVIO_fake_script() -- nil.No Doors 
+coroutine.wrap(GDKLJVH_fake_script)()
+local function HUWQZVY_fake_script() -- nil.No Doors 
 	local script = Instance.new('LocalScript', nil)
 
 	for i,v in pairs(workspace:GetDescendants()) do
@@ -198,8 +134,8 @@ local function XSRVIO_fake_script() -- nil.No Doors
 		end
 	end
 end
-coroutine.wrap(XSRVIO_fake_script)()
-local function KYVCVV_fake_script() -- nil.No Cell Doors 
+coroutine.wrap(HUWQZVY_fake_script)()
+local function SUYSX_fake_script() -- nil.No Cell Doors 
 	local script = Instance.new('LocalScript', nil)
 
 	for i,v in pairs(workspace:GetDescendants()) do
@@ -208,8 +144,28 @@ local function KYVCVV_fake_script() -- nil.No Cell Doors
 		end
 	end
 end
-coroutine.wrap(KYVCVV_fake_script)()
-local function HTXXBGA_fake_script() -- nil.No Bank Doors 
+coroutine.wrap(SUYSX_fake_script)()
+local function YQWIRRG_fake_script() -- nil.No Wait 
+	local script = Instance.new('LocalScript', nil)
+
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
+	while wait() do
+		for i,v in pairs (UI.CircleAction.Specs) do
+			v.Duration = 0;
+			v.Timed = true;
+		end
+	end
+end
+coroutine.wrap(YQWIRRG_fake_script)()
+local function HSYYAP_fake_script() -- nil.UnPacked Script Sayer 2 
+	local script = Instance.new('LocalScript', nil)
+
+	require(game:GetService("ReplicatedStorage").Game.Notification).new(
+	{Text = "Join Our Discord For Daily Updates And More Scripts :D.Discord.io/UnPacked.", Duration = 5
+	})
+end
+coroutine.wrap(HSYYAP_fake_script)()
+local function TQPQCU_fake_script() -- nil.No Bank Doors 
 	local script = Instance.new('LocalScript', nil)
 
 	for i,v in pairs(workspace:GetDescendants()) do
@@ -218,4 +174,32 @@ local function HTXXBGA_fake_script() -- nil.No Bank Doors
 		end
 	end
 end
-coroutine.wrap(HTXXBGA_fake_script)()
+coroutine.wrap(TQPQCU_fake_script)()
+local function XHZF_fake_script() -- nil.Inf Jump 
+	local script = Instance.new('LocalScript', nil)
+
+	local InfiniteJumpEnabled = true
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		if InfiniteJumpEnabled then
+			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+		end
+	end)
+	local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
+	InfiniteJump.Position = UDim2.new(0,10,0,130)
+	InfiniteJump.Size = UDim2.new(0,150,0,30)
+	InfiniteJump.MouseButton1Click:connect(function()
+		local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
+		local new = state == "Off" and "On" or state == "On" and "Off"
+		InfiniteJumpEnabled = new == "On"
+		InfiniteJump.Text = "Infinite Jump: " .. new
+	end)
+end
+coroutine.wrap(XHZF_fake_script)()
+local function VLVQ_fake_script() -- AllMiscInShit.Position 
+	local script = Instance.new('LocalScript', AllMiscInShit)
+
+	script.Parent.MainFrame.Position = UDim2.new(0, 15,0, 10) 
+	   script.Parent.MainFrame.Size = UDim2.new(0, 240,0, 438) 
+	    script.Parent.MainFrame:TweenSizeAndPosition(UDim2.new(0, 240,0, 438), UDim2.new(0, 26,0, 555), "Out", "Quad", 2)
+end
+coroutine.wrap(VLVQ_fake_script)()
