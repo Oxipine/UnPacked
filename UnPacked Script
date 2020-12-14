@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local AllMiscInShit = Instance.new("ScreenGui")
 local Script = Instance.new("Folder")
 
@@ -193,7 +188,6 @@ local function XHZF_fake_script() -- nil.Inf Jump
 		InfiniteJumpEnabled = new == "On"
 		InfiniteJump.Text = "Infinite Jump: " .. new
 	end)
-end
 coroutine.wrap(XHZF_fake_script)()
 local function VLVQ_fake_script() -- AllMiscInShit.Position 
 	local script = Instance.new('LocalScript', AllMiscInShit)
