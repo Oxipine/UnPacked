@@ -203,12 +203,3 @@ local function VLVQ_fake_script() -- AllMiscInShit.Position
 	    script.Parent.MainFrame:TweenSizeAndPosition(UDim2.new(0, 240,0, 438), UDim2.new(0, 26,0, 555), "Out", "Quad", 2)
 end
 coroutine.wrap(VLVQ_fake_script)()
-for a,b in pairs(getgc()) do 
-if typeof(b) == "function" then 
-for c,d in pairs(debug.getupvalues(b)) do 
-if typeof(d) == "table" and rawget(d,"Fireworks") then
-d.Fireworks(math.huge)
-end
-end
-end
-end
