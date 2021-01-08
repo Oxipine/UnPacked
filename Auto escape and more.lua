@@ -1,6 +1,3 @@
-
-wait (0.1)
-
 while wait(.4) do
 		local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
 		for i,v in pairs (UI.CircleAction.Specs) do
