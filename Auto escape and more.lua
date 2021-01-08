@@ -8,7 +8,8 @@ while true do wait ("5")
 	end
 end
 
-if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Team == game.Teams.Police then
+wait (0.1)
+
 while wait(.4) do
 		local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"));
 		for i,v in pairs (UI.CircleAction.Specs) do
@@ -18,6 +19,7 @@ while wait(.4) do
 		end
 	end
 
-if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Team == game.Teams.Criminal then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Oxipine/UnPacked/main/Unpacked%20All%20Misc%20In%20One",true))()
-end
+wait (0.1)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Oxipine/UnPacked/main/Unpacked%20All%20Misc%20In%20One",true))()
+
